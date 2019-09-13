@@ -1,4 +1,5 @@
-const Practice_StudentRepository = module.exports;
+const PracticeStudentRepository = module.exports;
 const DB = require('../utils/DB');
 
-Practice_StudentRepository.create = practice_student => DB('practica_estudiante').insert(practice_student).returning('*');
+PracticeStudentRepository.create = practiceStudent => DB('practica_estudiante').insert(practiceStudent).returning('*');
+PracticeStudentRepository.find = id => DB('practica_estudiante').select('*').where({ id }).first();
