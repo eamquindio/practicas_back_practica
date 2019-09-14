@@ -7,7 +7,8 @@ PracticeStudentService.create = async (practiceStudent) => {
 
   const practiceStudentToValidate = await PracticeStudentRepository.find(practiceStudent.id);
   console.log(practiceStudentToValidate);
-  if (practiceStudentToValidate) throw ErrorHandler.BaseError('Student has already been assigned to this practice', 409);
+  // eslint-disable-next-line max-len
+  if (practiceStudentToValidate) { throw ErrorHandler.BaseError('Student has already been assigned to this practice', 409); }
 
   return PracticeStudentRepository.create(practiceStudent);
 };

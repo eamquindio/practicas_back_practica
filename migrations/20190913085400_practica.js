@@ -7,8 +7,6 @@ exports.up = knex =>
     table.integer('tipo_practica_id').notNull();
     table.integer('empresa_NIT').notNull();
     table.integer('coordinador_practica_cedula').notNull();
-
-
   });
 
 exports.down = knex => knex.schema.dropTable('practica');
