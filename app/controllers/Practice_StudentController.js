@@ -13,3 +13,18 @@ PracticeStudentController.save = async (req, res, next) => {
     return next(error);
   }
 };
+
+PracticeStudentController.findByStudent = async (req, res, next) => {
+  try {
+    const { params: { id } } = req;
+    const student = await PracticeStudentService.find(id);
+
+    if (!student) return next(new ErrorHandler.BaseError('student not exists', 404));
+
+    return res.send(student);
+  } catch (error) {
+    console.log(error);
+
+    return next(error);
+  }
+};

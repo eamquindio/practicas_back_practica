@@ -12,3 +12,9 @@ PracticeStudentService.create = async (practiceStudent) => {
 
   return PracticeStudentRepository.create(practiceStudent);
 };
+
+PracticeStudentService.find = (estudiante_id) => {
+  console.log('find person');
+
+  return PracticeStudentRepository.findByStudent(estudiante_id);
+};
