@@ -9,13 +9,13 @@ const API = '/api/practicas-ms/tipo_practica';
 chai.use(chaiHttp);
 
 describe('type practice CRUD flows', () => {
-    before(() => Helper.migrate());
+  before(() => Helper.migrate());
   
-    beforeEach(async () => {
-      await Helper.clear();
-    });
+  beforeEach(async () => {
+    await Helper.clear();
+  });
 
-it('find tipo_practica test', async () => {
+  it('find tipo_practica test', async () => {
     await TipoPracticaRepository.create({ id: 1, descripcion: '240 hrs' });
 
     return chai

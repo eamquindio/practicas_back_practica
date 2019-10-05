@@ -23,9 +23,9 @@ TipoPracticaController.find = async (req, res, next) => {
     if (!typePractice) return next(new ErrorHandler.BaseError('typePractice not exists', 404));
 
     return res.send(typePractice);
-    } catch (error) {
-      console.log(error);
+  } catch (error) {
+    console.log(error);
 
-      return next(error);
-    }
+    return next(error);
+  }
 };
