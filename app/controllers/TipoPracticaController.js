@@ -1,5 +1,6 @@
 const TipoPracticaController = module.exports;
 const TipoPracticaService = require('../services/TipoPracticaService');
+const ErrorHandler = require('../utils/ErrorHandlerMiddleware');
 
 
 TipoPracticaController.save = async (req, res, next) => {

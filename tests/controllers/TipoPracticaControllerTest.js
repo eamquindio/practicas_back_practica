@@ -10,7 +10,7 @@ chai.use(chaiHttp);
 
 describe('type practice CRUD flows', () => {
   before(() => Helper.migrate());
-  
+
   beforeEach(async () => {
     await Helper.clear();
   });
