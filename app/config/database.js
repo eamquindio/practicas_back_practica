@@ -7,6 +7,9 @@ const {
   DB_HOST = 'localhost',
   DB_PORT = 5433,
 } = process.env;
+console.log('---------------------------------------------');
+console.log(`postgres://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}`);
+console.log('---------------------------------------------');
 
 module.exports = {
   client: 'pg',
