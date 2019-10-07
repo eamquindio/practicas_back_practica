@@ -75,8 +75,8 @@ describe('Practice_Student CRUD flows', () => {
               id: 1,
               fecha_inicio: '2019-09-12T05:00:00.000Z',
               practica_id: 1,
-              estado_id: 1,
               estudiante_id: 1094976580,
+              estado_id: 1,
             },
           ],
         );
