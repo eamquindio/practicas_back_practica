@@ -53,4 +53,36 @@ describe('Practice_Student CRUD flows', () => {
         assert.equal(error.status, 404);
       });
   });
+
+  it('find student test', async () => {
+    await PracticeStudentRepository.create({
+      id: 1,
+      fecha_inicio: '2019-09-12',
+      practica_id: 1,
+      estado_id: 1,
+      estudiante_id: 1094976580,
+    });
+
+    return chai
+      .request(app)
+      .get(`${API}/student/1094976580`)
+      .then(async (response) => {
+        const { body } = response;
+        assert.deepEqual(body,
+          [
+            { id: 1,
+            fecha_inicio: '2019-09-12T05:00:00.000Z',
+            practica_id: 1,
+            estado_id: 1,
+            estudiante_id: 1094976580,
+          }] );
+      });
+  });
+
+  it('find student not found test', async () => chai
+    .request(app)
+    .get(`${API}/student/1`)
+    .catch((error) => {
+      assert.equal(error.status, 404);
+    }));
 });
