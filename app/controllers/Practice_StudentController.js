@@ -1,5 +1,6 @@
 const PracticeStudentController = module.exports;
 const PracticeStudentService = require('../services/Practice_StudentService');
+const ErrorHandler = require('../utils/ErrorHandlerMiddleware');
 
 PracticeStudentController.save = async (req, res, next) => {
   const { body } = req;
