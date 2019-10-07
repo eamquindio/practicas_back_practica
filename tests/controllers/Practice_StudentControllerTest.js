@@ -68,7 +68,7 @@ describe('Practice_Student CRUD flows', () => {
       .get(`${API}/student/1094976580`)
       .then(async (response) => {
         const { body } = response;
-        assert.Equal(body.estudiante_id,1094976580);
+        assert.deepEqual(body.length,1);
       });
   });
 
