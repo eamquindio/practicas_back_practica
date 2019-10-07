@@ -13,4 +13,6 @@ router.get('/persons/find_by_name', PersonController.findByName);
 router.get('/persons/all', PersonController.listAll);
 router.post('/practica_estudiante', PracticeStudentController.save);
 
+router.get('/practica_estudiante/student/:id(\\d+)', PracticeStudentController.findByStudent);
+
 module.exports = router;
