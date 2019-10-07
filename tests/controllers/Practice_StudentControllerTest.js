@@ -77,9 +77,9 @@ describe('Practice_Student CRUD flows', () => {
               practica_id: 1,
               estado_id: 1,
               estudiante_id: 1094976580,
-            }
-          ]
-          );
+            },
+          ],
+        );
       });
   });
 
