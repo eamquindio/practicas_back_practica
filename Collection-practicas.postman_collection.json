@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "b049d43e-f857-411f-b706-6586d070d6dd",
+		"name": "Collection-practicas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post studenPractica",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/practica_estudiante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"practica_estudiante"
+					]
+				},
+				"description": "http://localhost:3000/api/practicas-ms/practica_estudiante \n /api/practicas-ms/practica_estudiante \n request que se encarga de crear un estudiante a una practica"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
