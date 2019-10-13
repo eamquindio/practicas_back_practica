@@ -34,7 +34,7 @@ PracticeStudentController.getAll = async (req, res, next) => {
   try {
     const practices = await PracticeStudentService.getAll();
 
-    if (!student) return res.status(204).send();
+    if (!practices) return res.status(204).send();
 
     return res.send(practices);
   } catch (error) {
