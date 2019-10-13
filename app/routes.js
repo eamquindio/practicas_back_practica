@@ -16,4 +16,7 @@ router.post('/practica_estudiante', PracticeStudentController.save);
 router.get('/tipo_practica/:id(\\d+)', TipoPracticaController.find);
 router.post('/tipo_practica', TipoPracticaController.save);
 
+router.get('/practica_estudiante/student/:id(\\d+)', PracticeStudentController.findByStudent);
+router.get('/practica_estudiante', PracticeStudentController.getAll);
+
 module.exports = router;
