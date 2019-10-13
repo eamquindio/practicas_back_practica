@@ -18,3 +18,9 @@ PracticeStudentService.find = (estudianteId) => {
 
   return PracticeStudentRepository.findByStudent(estudianteId);
 };
+
+PracticeStudentService.getAll = () => {
+  console.log('find all practices');
+
+  return PracticeStudentRepository.getAll();
+};

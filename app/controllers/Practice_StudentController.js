@@ -29,3 +29,17 @@ PracticeStudentController.findByStudent = async (req, res, next) => {
     return next(error);
   }
 };
+
+PracticeStudentController.getAll = async (req, res, next) => {
+  try {
+    const practices = await PracticeStudentService.getAll();
+
+    if (!student) return res.status(204).send();
+
+    return res.send(practices);
+  } catch (error) {
+    console.log(error);
+
+    return next(error);
+  }
+};
