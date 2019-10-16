@@ -17,7 +17,7 @@ describe('PracticeType CRUD flows', () => {
 
 
   it('find all practiceType', async () => {
-    await PracticeTypeRepository.create([{ id: 1, descripcion: 'camilo' }, { id: 2, descripcion: 'claudia' }]);
+    await PracticeTypeRepository.create([{ id: 1, descripcion: '24 Horas' }, { id: 2, descripcion: 'Contrato' }]);
 
     return chai
       .request(app)
