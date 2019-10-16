@@ -14,19 +14,19 @@ describe('PracticeType CRUD flows', () => {
   beforeEach(async () => {
     await Helper.clear();
   });
- 
- 
+
+
   it('find all practiceType', async () => {
-  await PracticeTypeRepository.create([{ id: 1, descripcion: 'camilo' }, { id: 2, descripcion: 'claudia' }]);
-  
-  return chai
+    await PracticeTypeRepository.create([{ id: 1, descripcion: 'camilo' }, { id: 2, descripcion: 'claudia' }]);
+
+    return chai
       .request(app)
       .get(`${API}/all`)
       .then(async (response) => {
         const { body } = response;
         assert.deepEqual(body.length, 2);
       });
-    });
+  });
 
   it('find all practicetype empty test', async () => chai
     .request(app)

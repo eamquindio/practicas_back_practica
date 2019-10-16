@@ -16,4 +16,4 @@ PracticeTypeService.listAll = () => {
   console.log('find all practice_type');
 
   return PracticeTypeRepository.listAll();
-}
+};
