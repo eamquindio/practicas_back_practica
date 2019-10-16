@@ -34,4 +34,4 @@ describe('PracticeType CRUD flows', () => {
     .then(async (response) => {
       assert.equal(response.status, 204);
     }));
-}); 
+});
